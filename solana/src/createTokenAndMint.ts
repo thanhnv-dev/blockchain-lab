@@ -18,7 +18,7 @@ export const createTokenAndMint = async (
     mint,
     payer.publicKey
   );
-  console.log("Token Account:", tokenAccount.address.toBase58());
+  console.log("✅ Token Account:", tokenAccount.address.toBase58());
 
   // 3. Mint token
   await mintTo(
@@ -30,6 +30,6 @@ export const createTokenAndMint = async (
     7000_000_000
   );
 
-  console.log("Mint Address:", mint.toBase58());
+  console.log("✅ Mint Address:", mint.toBase58());
   return mint;
 };

@@ -29,6 +29,7 @@ export const updateMetaData = async (
   payer: web3.Keypair,
   mintAddress: string
 ) => {
+  console.log("Starting update metadata");
   const INITIALIZE = true;
   const mint = new web3.PublicKey(mintAddress);
 
@@ -39,7 +40,7 @@ export const updateMetaData = async (
   const ourMetadata = {
     name: "Brock Token",
     symbol: "BT",
-    uri: "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/blob/main/solana/assets/metadata.json",
+    uri: "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/metadata.json",
   };
   const onChainData = {
     ...ourMetadata,
@@ -63,7 +64,6 @@ export const updateMetaData = async (
       ...accounts,
       ...data,
     }).sendAndConfirm(umi);
-    console.log(txid);
   } else {
     const data: UpdateMetadataAccountV2InstructionData = {
       data: some(onChainData),
@@ -80,6 +80,6 @@ export const updateMetaData = async (
       ...accounts,
       ...data,
     }).sendAndConfirm(umi);
-    console.log(txid);
   }
+  console.log("Update metadata completed");
 };
