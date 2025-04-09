@@ -9,15 +9,15 @@ const main = async () => {
 
   // Create keypair from seed phrase
   const seedPhrase =
-    "night blur supply camp category rigid kit click robust flock river father";
+    "venture jungle believe gate smile bullet tissue maze story border furnace asthma";
   const payer = await createKeypairFromSeed(seedPhrase);
   console.log("✅ Payer:", payer.publicKey.toBase58());
 
-  // Create new token
+  //   Create new token
   const mint = await createTokenAndMint(connection, payer);
 
   // Mint token to an account
-  const tokenAccount = await updateMetaData(payer, mint.toBase58());
+  await updateMetaData(payer, mint.toBase58(), false);
 };
 
 main().catch(console.error);

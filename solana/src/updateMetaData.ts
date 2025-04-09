@@ -27,10 +27,10 @@ import {
 
 export const updateMetaData = async (
   payer: web3.Keypair,
-  mintAddress: string
+  mintAddress: string,
+  initialize: boolean = true
 ) => {
   console.log("Starting update metadata");
-  const INITIALIZE = true;
   const mint = new web3.PublicKey(mintAddress);
 
   const umi = createUmi("https://api.devnet.solana.com");
@@ -38,19 +38,18 @@ export const updateMetaData = async (
   umi.use(signerIdentity(signer, true));
 
   const ourMetadata = {
-    name: "Brock Token",
-    symbol: "BT",
+    name: "Solana Test Token",
+    symbol: "STK",
     uri: "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/metadata.json",
   };
   const onChainData = {
     ...ourMetadata,
-    // we don't need that
     sellerFeeBasisPoints: 0,
     creators: none<Creator[]>(),
     collection: none<Collection>(),
     uses: none<Uses>(),
   };
-  if (INITIALIZE) {
+  if (initialize) {
     const accounts: CreateMetadataAccountV3InstructionAccounts = {
       mint: fromWeb3JsPublicKey(mint),
       mintAuthority: signer,
@@ -81,5 +80,5 @@ export const updateMetaData = async (
       ...data,
     }).sendAndConfirm(umi);
   }
-  console.log("Update metadata completed");
+  console.log("✅ Update metadata completed");
 };

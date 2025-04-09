@@ -1,6 +1,6 @@
 {
-  "name": "Brock Token",
-  "symbol": "BT",
+  "name": "Solana Test Token",
+  "symbol": "STK",
   "description": "Just a test for how to name your token",
-  "image": "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/token_logo.png"
+  "image": "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/token_logo_2.png"
 }
