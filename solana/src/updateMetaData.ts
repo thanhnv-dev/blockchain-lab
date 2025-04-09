@@ -37,9 +37,9 @@ export const updateMetaData = async (
   umi.use(signerIdentity(signer, true));
 
   const ourMetadata = {
-    name: "Dragon Token",
-    symbol: "DT",
-    uri: "https://raw.githubusercontent.com/loopcreativeandy/video-tutorial-resources/main/metadataUpdate/metadata.json",
+    name: "Brock Token",
+    symbol: "BT",
+    uri: "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/blob/main/solana/assets/metadata.json",
   };
   const onChainData = {
     ...ourMetadata,

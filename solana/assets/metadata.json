@@ -1,7 +1,6 @@
 {
-    "name": "Silly Dragon Token",
-    "symbol": "SDT",
-    "description": "Just a test for how to name your token, again and again ;)",
-    "image": "https://raw.githubusercontent.com/loopcreativeandy/video-tutorial-resources/main/metadataUpdate/sillydragon.jpg"
-  }
-  
+  "name": "Brock Token",
+  "symbol": "BT",
+  "description": "Just a test for how to name your token",
+  "image": "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/blob/main/solana/assets/token_logo.png"
+}
