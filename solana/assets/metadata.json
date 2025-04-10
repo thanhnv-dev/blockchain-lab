@@ -1,6 +1,6 @@
 {
-  "name": "Solana Test Token",
-  "symbol": "STK",
+  "name": "Thanh NV2",
+  "symbol": "NV2",
   "description": "Just a test for how to name your token",
   "image": "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/token_logo_2.png"
 }

@@ -13,11 +13,11 @@ const main = async () => {
   const payer = await createKeypairFromSeed(seedPhrase);
   console.log("✅ Payer:", payer.publicKey.toBase58());
 
-  //   Create new token
-  const mint = await createTokenAndMint(connection, payer);
+  // Create new token
+//   const mint = await createTokenAndMint(connection, payer);
 
   // Mint token to an account
-  await updateMetaData(payer, mint.toBase58(), false);
+  await updateMetaData(payer, "4gCGG7hqVWtWWwCU95cK5DRK6buh5JZjnCUzQptAmCdu", true);
 };
 
 main().catch(console.error);

@@ -27,7 +27,7 @@ export const createTokenAndMint = async (
     mint,
     tokenAccount.address,
     payer,
-    7000_000_000
+    7_000_000_000_000
   );
 
   console.log("✅ Mint Address:", mint.toBase58());

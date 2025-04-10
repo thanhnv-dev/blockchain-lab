@@ -38,8 +38,8 @@ export const updateMetaData = async (
   umi.use(signerIdentity(signer, true));
 
   const ourMetadata = {
-    name: "Solana Test Token",
-    symbol: "STK",
+    name: "Thanh NV2",
+    symbol: "NV2",
     uri: "https://raw.githubusercontent.com/thanhnv-dev/blockchain-lab/main/solana/assets/metadata.json",
   };
   const onChainData = {
