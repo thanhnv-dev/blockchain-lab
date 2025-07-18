@@ -1,0 +1,22 @@
+/* eslint-disable import/no-unresolved */
+import {
+  ADMIN_FEE_PERCENT,
+  ADMIN_TON_ADDRESS,
+  ENV,
+  ENV_NAME,
+  TON_API_BASE_URL,
+  TON_API_TOKEN,
+  TON_VIEWER_TRANSACTION_URL,
+  TON_VIEWER_URL,
+} from "../../env/env.test";
+
+export default {
+  ADMIN_FEE_PERCENT,
+  ADMIN_TON_ADDRESS,
+  ENV,
+  ENV_NAME,
+  TON_API_BASE_URL,
+  TON_API_TOKEN,
+  TON_VIEWER_TRANSACTION_URL,
+  TON_VIEWER_URL,
+};
