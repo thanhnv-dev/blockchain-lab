@@ -2,6 +2,7 @@ import { WalletContractV5R1 } from "@ton/ton";
 import { keyPairFromSeed } from "@ton/crypto";
 import * as bip39 from "bip39";
 import { derivePath } from "ed25519-hd-key";
+import { TonNetwork } from "./common/TonNetwork";
 
 export const createWallet = async ({
   seedPhrase,
@@ -17,7 +18,7 @@ export const createWallet = async ({
   let keyPair = keyPairFromSeed(derivedSeed);
 
   let workchain = 0;
-  let networkGlobalId = isTestnet ? -3 : -239;
+  let networkGlobalId = isTestnet ? TonNetwork.TESTNET : TonNetwork.MAINNET;
   let wallet = WalletContractV5R1.create({
     workchain,
     publicKey: keyPair.publicKey,
